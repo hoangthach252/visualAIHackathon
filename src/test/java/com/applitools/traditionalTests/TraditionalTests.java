@@ -215,7 +215,6 @@ public class TraditionalTests {
     public void afterTest() {
         // Close all windows of the browser.
         driver.quit();
-        Reporter.log( "Message", true );
     }
 }
 
