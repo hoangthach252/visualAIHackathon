@@ -57,16 +57,16 @@ public class LoginPage extends BasePage{
         return getText(Locators.REMEMBER_ME_TEXT);
     }
 
-    public boolean isTwitterIconDisplayed() {
-        return isElementDisplayed(Locators.TWITTER_ICON);
+    public boolean isTwitterIconClickable() {
+        return isElementClickable(Locators.TWITTER_ICON);
     }
 
-    public boolean isFacebookIconDisplayed() {
-        return isElementDisplayed(Locators.FACEBOOK_ICON);
+    public boolean isFacebookIconClickable() {
+        return isElementClickable(Locators.FACEBOOK_ICON);
     }
 
-    public boolean isLinkedInIconDisplayed() {
-        return isElementDisplayed(Locators.LINKEDIN_ICON);
+    public boolean isLinkedInIconClickable() {
+        return isElementClickable(Locators.LINKEDIN_ICON);
     }
 
     public void enterUserName(String username) {

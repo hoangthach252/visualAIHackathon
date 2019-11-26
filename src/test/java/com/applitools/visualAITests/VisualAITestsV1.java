@@ -19,6 +19,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class VisualAITestsV1 {
 
@@ -70,8 +71,13 @@ public class VisualAITestsV1 {
                 Integer.parseInt(viewPortWidth), Integer.parseInt(viewPortHeight)));
         // Open the app V1
         driver.get(CommonData.APP_V1_URL);
+        LoginPage loginPage = new LoginPage(driver);
         // Visual checkpoint #1.
         eyes.checkWindow("Login Page");
+        // Assert the Twitter, Facebook and LinkedIn icons are Clickable. This will be a additional assertion for Visual Validation.
+        assertThat(loginPage.isTwitterIconClickable()).isTrue();
+        assertThat(loginPage.isFacebookIconClickable()).isTrue();
+        assertThat(loginPage.isLinkedInIconClickable()).isTrue();
         // End the test.
         eyes.closeAsync();
     }

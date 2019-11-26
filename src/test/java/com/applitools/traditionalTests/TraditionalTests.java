@@ -72,10 +72,10 @@ public class TraditionalTests {
         // Assert the Remember Me check box text is correct
         assertThat(loginPage.getRememberMeText()).isEqualTo("Remember Me");
 
-        // Assert the Twitter, Facebook and LinkedIn icons are displayed
-        assertThat(loginPage.isTwitterIconDisplayed()).isTrue();
-        assertThat(loginPage.isFacebookIconDisplayed()).isTrue();
-        assertThat(loginPage.isLinkedInIconDisplayed()).isTrue();
+        // Assert the Twitter, Facebook and LinkedIn icons are displayed and Clickable
+        assertThat(loginPage.isTwitterIconClickable()).isTrue();
+        assertThat(loginPage.isFacebookIconClickable()).isTrue();
+        assertThat(loginPage.isLinkedInIconClickable()).isTrue();
     }
 
 
